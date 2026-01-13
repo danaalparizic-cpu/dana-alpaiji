@@ -3,224 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dana Alpaiji | Spider-Verse Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Dana Alpaiji | Strategic Mastermind - Grand Line Edition</title>
     
-    <style>
-        /* --- TAMBAHAN ELEMEN KOMIK (TANPA MENGURANGI) --- */
-        html { scroll-behavior: smooth; }
-
-        /* Foto Bulat & Animasi Floating */
-        .img-container, .comic-box {
-            border-radius: 50% !important; 
-            overflow: hidden;
-            border: 8px solid #e63946;
-            box-shadow: 10px 10px 0px #ffd700;
-            position: relative;
-        }
-
-        .img-container img, .comic-box img {
-            border-radius: 50% !important;
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            animation: floatingDana 3s ease-in-out infinite;
-        }
-
-        @keyframes floatingDana {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(3deg); }
-        }
-
-        /* Dekorasi Action Words */
-        .action-word-extra {
-            position: absolute;
-            font-family: 'Permanent Marker', cursive;
-            font-size: 2.5rem;
-            color: #ffd700;
-            text-shadow: 4px 4px 0px #e63946;
-            z-index: 5;
-            pointer-events: none;
-            text-transform: uppercase;
-            animation: pulseText 2s infinite;
-        }
-
-        @keyframes pulseText {
-            0%, 100% { transform: scale(1); opacity: 0.8; }
-            50% { transform: scale(1.2); opacity: 1; }
-        }
-
-        .comic-label {
-            position: absolute;
-            background: #000;
-            color: #fff;
-            font-family: 'Bebas Neue';
-            padding: 5px 20px;
-            font-size: 1.5rem;
-            border: 2px solid #e63946;
-            transform: skewX(-15deg);
-            z-index: 10;
-        }
-
-        .comic-dots {
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            background-image: radial-gradient(#e63946 2px, transparent 2px);
-            background-size: 15px 15px;
-            opacity: 0.3;
-            z-index: -1;
-        }
-
-        /* Efek Glitch saat Hover Foto */
-        .img-container:hover img, .comic-box:hover img {
-            animation: glitchShake 0.2s infinite;
-            filter: contrast(150%) brightness(120%);
-        }
-
-        @keyframes glitchShake {
-            0% { transform: translate(3px, 0); }
-            50% { transform: translate(-3px, 3px); filter: hue-rotate(45deg); }
-            100% { transform: translate(0); }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="pirate-pro-dark">
+
+    <div class="cursor-sword"></div>
+    <div class="bg-one-piece-final"></div>
+    <div class="mist-overlay"></div>
 
     <div id="loader">
         <div class="loader-content">
-            <h1 class="loader-text-main">DANA ALPAIJI</h1>
-            <div class="shatter-glass-effect"></div>
+            <div class="flight-track">
+                <div class="flyer-unit"><i class="fas fa-bolt"></i></div>
+            </div>
+            <h1 class="font-pirate">DANA ALPAIJI</h1>
+            <div class="load-bar"><div class="load-fill"></div></div>
+            <p class="status-msg">Wait And See, Sabar Ya.......</p>
         </div>
     </div>
 
-    <div class="halftone-overlay"></div>
-    <div class="grid-overlay"></div>
-    <div class="vignette-overlay"></div>
-    <div class="scanlines"></div>
-
     <header class="header">
-        <a href="#home" class="logo glitch" data-text="DANA ALPAIJI.">DANA ALPAIJI<span>.</span></a>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#achievement">Awards</a>
-        </nav>
+        <div class="brand font-sora">DANA ALPAIJI</div>
+        <div class="header-right">
+            <nav class="navbar">
+                <a href="#home" class="nav-link aktif">HOME</a>
+                <a href="#about" class="nav-link">EDUCATION</a>
+                <a href="#experience" class="nav-link">RIWAYAT</a>
+            </nav>
+            <div class="social-header">
+                <a href="https://instagram.com/_whoisdannz" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/in/danaalpaiji" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:danaalparizic@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
     </header>
 
-    <section class="home" id="home">
-        <div class="action-word-extra" style="top: 15%; right: 10%;">THWIP!</div>
-        <div class="comic-dots" style="top: 20%; left: 5%;"></div>
-        
-        <div class="action-lines"></div>
-        <div class="home-content">
-            <h1 class="reveal glitch-main" data-text="DANA ALPAIJI"><span>DANA</span> ALPAIJI</h1>
-            <h3 class="reveal">Strategic Leader | Economic Analyst</h3>
-            <p class="reveal">Mahasiswa Ekonomi Syariah UNTIRTA dengan perolehan <strong>IPK 3.97</strong>. Pemimpin strategis yang mengombinasikan ketegasan legislatif dengan efisiensi operasional manajerial.</p>
-            
-            <div class="btn-box reveal">
-                <a href="mailto:danaalparizic@gmail.com" class="btn">HIRE ME <span class="btn-glitch"></span></a>
-                <a href="#" class="btn btn-outline">RESUME</a>
-            </div>
+    <main class="ui-container">
 
-            <div class="social-sci reveal">
-                <a href="https://www.instagram.com/_whoisdannz?igsh=aTNrc2Riamd0ajZ0" target="_blank"><i class="ph-bold ph-instagram-logo"></i></a>
-                <a href="https://www.linkedin.com/in/danaalpaiji/" target="_blank"><i class="ph-bold ph-linkedin-logo"></i></a>
-                <a href="mailto:danaalparizic@gmail.com"><i class="ph-bold ph-envelope"></i></a>
-            </div>
-        </div>
-
-        <div class="home-img reveal">
-            <div class="img-container">
-                <div class="circle-bg"></div>
-                <img src="foto.png" alt="Dana Alpaiji" class="main-photo">
-                <div class="spin-ring"></div>
-                <div class="comic-badge">IPK 3.97</div>
-                <div class="comic-spark pulse">BOOM!</div>
-                <div class="action-word zap">ZAP!</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="about" id="about">
-        <div class="action-word-extra" style="bottom: 10%; left: 5%; color: #00d4ff;">WHOOSH!</div>
-        <div class="comic-label" style="top: -20px; left: 10%;">TOP_STUDENT_MODE</div>
-
-        <div class="floating-props pow">POW!</div>
-        <h2 class="heading reveal glitch" data-text="ACADEMIC BACKGROUND">ACADEMIC <span>BACKGROUND</span></h2>
-        <div class="section-flex reveal">
-            <div class="comic-panel tilt-left">
-                <div class="comic-box">
-                    <img src="foto_about.png" alt="Dana Academic">
-                    <div class="comic-tag">ANALYSIS_MODE</div>
+        <section class="home" id="home">
+            <div class="hero-layout">
+                <div class="hero-left">
+                    <span class="sub-heading">SUPREME STRATEGIC ANALYST</span>
+                    <h1 class="hero-title font-sora">Menjelajahi Samudera <span>Financial</span>.</h1>
+                    <p class="hero-desc">
+                        Mahasiswa aktif Ekonomi Syariah di Universitas Sultan Ageng Tirtayasa angkatan 2024. 
+                        Dengan perolehan akademik IPK 3.97, saya berfokus pada deduksi kebijakan fiskal makro 
+                        serta optimasi manajemen strategis guna menavigasi dinamika ekonomi di era global.
+                    </p>
+                    <div class="hero-btns">
+                        <button onclick="accessData()" class="btn-p blue">BOUNTY INFO</button>
+                        <button class="btn-p red">EDUCATION</button>
+                    </div>
                 </div>
-                <div class="panel-border"></div>
-            </div>
-            <div class="main-card-complex">
-                <div class="card-header">UNTIRTA</div>
-                <h3>Universitas Sultan Ageng Tirtayasa</h3>
-                <p class="sub">Ekonomi Syariah | Angkatan 2024 - Sekarang</p>
-                <p class="desc">Mengembangkan keahlian mendalam dalam instrumen keuangan syariah dan kebijakan fiskal makro.</p>
-                <div class="halftone-box"></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="experience" id="experience">
-        <div class="action-word-extra" style="top: 50%; right: 5%; color: #e63946;">CRASH!</div>
-        <div class="comic-dots" style="bottom: 10%; right: 10%;"></div>
-
-        <div class="floating-props krak">KRAK!</div>
-        <h2 class="heading reveal glitch" data-text="WORK & ORGANIZATION">WORK & <span>ORGANIZATION</span></h2>
-        <div class="section-flex rev reveal">
-            <div class="comic-panel tilt-right">
-                <div class="comic-box">
-                    <img src="foto_kerja.png" alt="Dana Leadership">
-                    <div class="comic-tag red">LEADER_VIBE</div>
-                </div>
-                <div class="panel-border blue"></div>
-            </div>
-            <div class="exp-container-complex">
-                <div class="exp-box-complex">
-                    <div class="tag">PROFESSIONAL ROLE</div>
-                    <h4>Asisten Manajer</h4>
-                    <span class="place">PT Orins Multidaya Indonesia (2022 - 2024)</span>
-                </div>
-                <div class="exp-box-complex">
-                    <div class="tag">LEGISLATIVE ROLE</div>
-                    <h4>Anggota Komisi IV - DPM FEB</h4>
-                    <span class="place">UNTIRTA (Periode 2026)</span>
-                </div>
-                <div class="exp-box-complex">
-                    <div class="tag">ORGANIZATION</div>
-                    <h4>Ketua Pelaksana SEF</h4>
-                    <span class="place">Sultan Ageng Tirtayasa (2025)</span>
-                    <p>Bertanggung jawab penuh atas manajemen operasional dan kesuksesan program kerja Sharia Economics Forum.</p>
-                </div>
-                <div class="exp-box-complex">
-                    <div class="tag">ORGANIZATION</div>
-                    <h4>Pengurus HMJ Ekonomi Syariah</h4>
-                    <span class="place">UNTIRTA</span>
+                <div class="hero-right">
+                    <div class="profile-portal parallax-mouse" data-speed="0.04">
+                        <div class="dual-rings">
+                            <div class="r-seg blue"></div>
+                            <div class="r-seg red"></div>
+                        </div>
+                        <div class="img-inner">
+                            <img src="foto.png" alt="Dana" class="img-main-trans">
+                        </div>
+                        <div class="bounty-label font-sora">BOUNTY: 3.97 </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="experience" id="achievement" style="padding-top: 100px;">
-        <div class="action-word-extra" style="top: 20%; left: 5%;">WIN!</div>
-        <div class="floating-props pow">GO!</div>
-        <h2 class="heading reveal glitch" data-text="AWARDS & ACHIEVEMENTS">AWARDS & <span>ACHIEVEMENTS</span></h2>
-        <div class="exp-container-complex reveal" style="margin: 0 auto; max-width: 800px;">
-             <div class="exp-box-complex" style="border: 4px dashed #ffd700;">
-                <div class="tag red">ACADEMIC EXCELLENCE</div>
-                <h4>Mahasiswa Berprestasi IPK 3.97</h4>
-                <p>Pencapaian akademik tertinggi dengan konsistensi luar biasa.</p>
+        <section class="about" id="about">
+            <div class="container-padat">
+                <h2 class="section-title">ACADEMIC</h2>
+                <div class="about-grid">
+                    <div class="edu-card reveal-left rumble">
+                        <div class="parallax-mouse" data-speed="0.02">
+                            <img src="foto_about.png" alt="Edu" class="img-round-md border-red">
+                        </div>
+                        <div class="edu-info">
+                            <h3 class="font-pirate">Program Studi Ekonomi Syariah</h3>
+                            <p class="univ-tag">UNTIRTA | Angkatan 2024 (Aktif)</p>
+                            <p class="formal-p">Fokus riset pada arsitektur instrumen keuangan Islam dan analisis komprehensif kebijakan fiskal terhadap stabilitas pasar modal nasional.</p>
+                        </div>
+                    </div>
+                    <div class="skill-side reveal-right">
+                        <div class="s-module">
+                            <div class="s-head"><span>Analysis Precision</span> <span>95%</span></div>
+                            <div class="s-bar"><div class="s-fill blue" style="width: 95%;"></div></div>
+                        </div>
+                        <div class="s-module">
+                            <div class="s-head"><span>Strategic GPA</span> <span>3.97</span></div>
+                            <div class="s-bar"><div class="s-fill red" style="width: 100%;"></div></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="experience" id="experience">
+            <div class="container-padat">
+                <h2 class="section-title">Riwayat Kerja dan Organisasi</h2>
+                <div class="mission-wrapper">
+                    <div class="mission-list">
+                        <div class="m-box reveal-left rumble">
+                            <div class="m-icon blue"><i class="fas fa-briefcase"></i></div>
+                            <div class="m-info">
+                                <span class="m-date">2022 - 2024</span>
+                                <h4>Asisten Manajer - PT Orins</h4>
+                                <p class="formal-p">Optimalisasi operasional harian dan manajemen alur kerja tim untuk efisiensi korporasi.</p>
+                            </div>
+                        </div>
+                        <div class="m-box reveal-left rumble">
+                            <div class="m-icon red"><i class="fas fa-users"></i></div>
+                            <div class="m-info">
+                                <span class="m-date">2024 - Sekarang</span>
+                                <h4>Anggota HMJ Ekonomi Syariah</h4>
+                                <p class="formal-p">Berperan aktif dalam pengembangan organisasi dan pelaksanaan program strategis kemahasiswaan.</p>
+                            </div>
+                        </div>
+                        <div class="m-box reveal-left rumble">
+                            <div class="m-icon blue"><i class="fas fa-bolt"></i></div>
+                            <div class="m-info">
+                                <span class="m-date">2024</span>
+                                <h4>Ketua Pelaksana SEF</h4>
+                                <p class="formal-p">Memimpin inisiasi Sharia Economic Festival dengan koordinasi penuh antar divisi kepanitiaan.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="award-box-side reveal-right">
+                        <div class="rank-tag-top">SUPREME RANK</div>
+                        <div class="award-visual parallax-mouse" data-speed="0.03">
+                            <img src="foto_award.png" alt="Award" class="img-round-lg border-blue">
+                            <div class="haki-scan"></div>
+                        </div>
+                        <div class="award-text">
+                            <h3 class="font-pirate">Pencapaian Tertinggi</h3>
+                            <p class="formal-p">Penganugerahan atas dedikasi akademik tinggi dengan raihan IPK 3.97 tervalidasi sistem.</p>
+                            <button onclick="verifyLog()" class="btn-verify">CEK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p class="font-pirate">&copy; 2026 DANA ALPAIJI | BE NICE </p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
