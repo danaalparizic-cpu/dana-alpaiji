@@ -1,0 +1,246 @@
+/* FILE: style.css 
+   THEME: MILES MORALES PROFESSIONAL (NAVY & RED)
+   FONT: BOOK STYLE OLD (SERIF)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400&family=Bangers&display=swap');
+
+:root {
+    --navy-gelap: #051622;
+    --navy-terang: #102A43;
+    --merah-spidey: #DE1A1A;
+    --putih: #FFFFFF;
+    --abu-abu: #6B7280;
+    --font-buku: 'Crimson Pro', serif;
+    --font-komik: 'Bangers', cursive;
+}
+
+/* CUSTOM CURSOR */
+#cursor-kustom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--merah-spidey);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 99999;
+    transition: transform 0.1s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none; /* Sembunyikan kursor asli */
+}
+
+body {
+    background-color: var(--navy-gelap);
+    color: var(--putih);
+    font-family: var(--font-buku);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND MOTIF JARING */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 2px 2px, rgba(222, 26, 26, 0.05) 1px, transparent 0);
+    background-size: 50px 50px;
+    z-index: -1;
+}
+
+/* NAVIGASI RAPI */
+nav {
+    background: rgba(5, 22, 34, 0.95);
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--merah-spidey);
+    backdrop-filter: blur(10px);
+}
+
+.logo-brand {
+    font-family: var(--font-komik);
+    font-size: 2.2rem;
+    color: var(--putih);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.logo-brand span { color: var(--merah-spidey); }
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: var(--putih);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--merah-spidey);
+    transform: translateY(-3px);
+}
+
+/* HERO SECTION */
+.hero-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    gap: 60px;
+}
+
+.hero-teks { flex: 1; }
+
+.hero-teks h2 {
+    font-family: var(--font-komik);
+    color: var(--merah-spidey);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-teks h1 {
+    font-size: 5.5rem;
+    line-height: 0.9;
+    margin-bottom: 25px;
+}
+
+/* FOTO ANIMASI GERAK & INTERAKTIF */
+.hero-foto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.foto-bingkai {
+    width: 400px;
+    height: 500px;
+    border: 5px solid var(--putih);
+    box-shadow: 20px 20px 0px var(--merah-spidey);
+    overflow: hidden;
+    transition: 0.5s ease;
+    animation: gerakFoto 6s ease-in-out infinite;
+}
+
+@keyframes gerakFoto {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+.foto-bingkai img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+/* Efek Hitam Putih Pas Klik (Triggered by JS) */
+.hitam-putih {
+    filter: grayscale(100%) contrast(120%) !important;
+}
+
+/* KOMIK POP UP */
+.efek-komik {
+    position: fixed;
+    pointer-events: none;
+    font-family: var(--font-komik);
+    font-size: 2.5rem;
+    color: var(--merah-spidey);
+    text-shadow: 3px 3px var(--putih);
+    z-index: 9999;
+    animation: popOut 1s forwards;
+}
+
+@keyframes popOut {
+    0% { transform: scale(0) rotate(-20deg); opacity: 1; }
+    100% { transform: scale(1.5) translateY(-100px); opacity: 0; }
+}
+
+/* KARTU KONTEN */
+.kartu {
+    background: var(--navy-terang);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 40px;
+    margin-bottom: 30px;
+    transition: 0.4s;
+}
+
+.kartu:hover {
+    border-left: 10px solid var(--merah-spidey);
+    transform: translateX(10px);
+}
+
+.judul-seksi {
+    font-family: var(--font-komik);
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--merah-spidey);
+    text-transform: uppercase;
+}
+
+/* BUTTON */
+.tombol-spidey {
+    padding: 15px 40px;
+    background: var(--merah-spidey);
+    color: var(--putih);
+    text-decoration: none;
+    font-family: var(--font-komik);
+    font-size: 1.2rem;
+    border: 2px solid var(--putih);
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.tombol-spidey:hover {
+    background: var(--putih);
+    color: var(--merah-spidey);
+    box-shadow: 8px 8px 0px var(--merah-spidey);
+}
+
+/* FOOTER */
+footer {
+    padding: 60px 10%;
+    background: #000;
+    text-align: center;
+    border-top: 5px solid var(--merah-spidey);
+}
+
+/* PRELOADER */
+#preloader {
+    position: fixed; inset: 0; background: var(--navy-gelap);
+    display: flex; justify-content: center; align-items: center; z-index: 10000;
+}
+.web-loading {
+    width: 100px; height: 100px;
+    border: 5px solid var(--merah-spidey);
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: putar 1s linear infinite;
+}
+@keyframes putar { to { transform: rotate(360deg); } }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-wrapper { flex-direction: column; text-align: center; padding-top: 50px; }
+    .hero-teks h1 { font-size: 3.5rem; }
+    .foto-bingkai { width: 300px; height: 350px; }
+    .nav-menu { display: none; }
+}
